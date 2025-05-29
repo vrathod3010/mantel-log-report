@@ -1,9 +1,11 @@
-import { states$ } from "@/services/uploadFile";
 import { observer } from "@legendapp/state/react";
 import { Table, TableBody, TableCell, TableRow } from "./ui/table";
+import { stats$ } from "@/store/stats";
 
 export const IpCount = observer(() => {
-  const ipCount = states$.uniqueIpCount.count.get();
+  const ipCount = stats$.uniqueIpCount.count.get();
+
+  if (ipCount === null) return null;
   return (
     <Table>
       <TableBody>
