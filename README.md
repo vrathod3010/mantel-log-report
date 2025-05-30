@@ -29,18 +29,6 @@ Built with:
 
 ---
 
-## 🛠️ Tech Stack
-
-| Tech                 | Purpose                                 |
-| -------------------- | --------------------------------------- |
-| React + TypeScript   | UI & app logic                          |
-| sql.js + Drizzle ORM | SQLite in the browser                   |
-| @legendapp/state     | Lightweight observable state management |
-| Vitest + RTL         | Unit testing                            |
-| Vite                 | Build tooling                           |
-
----
-
 ## Installation
 
 1. Clone the repository:
