@@ -23,7 +23,7 @@ describe("<IpCount />", () => {
 
   it("renders nothing when ip count is null", () => {
     render(<IpCount />);
-    expect(screen.queryByText("Total IP")).not.toBeInTheDocument();
+    expect(screen.queryByText("Unique IP")).not.toBeInTheDocument();
   });
 
   it("renders the correct IP count", () => {
@@ -31,7 +31,7 @@ describe("<IpCount />", () => {
 
     render(<IpCount />);
 
-    expect(screen.getByText("Total IP")).toBeInTheDocument();
+    expect(screen.getByText("Unique IP")).toBeInTheDocument();
     expect(screen.getByText("42")).toBeInTheDocument();
   });
 });

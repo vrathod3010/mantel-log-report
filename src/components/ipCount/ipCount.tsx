@@ -10,7 +10,7 @@ export const IpCount = observer(() => {
     <Table>
       <TableBody>
         <TableRow>
-          <TableCell>Total IP</TableCell>
+          <TableCell>Unique IP</TableCell>
           <TableCell className="text-right">{ipCount}</TableCell>
         </TableRow>
       </TableBody>
