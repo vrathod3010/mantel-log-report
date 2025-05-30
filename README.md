@@ -13,8 +13,6 @@ Built with:
 - 🧪 Vitest + Testing Library for unit testing
 - ⚡ Vite for bundling and development
 
----
-
 ## 🚀 Features
 
 - Upload Apache/Nginx-style access logs
@@ -26,8 +24,6 @@ Built with:
   - Top 3 requesting IP addresses
 - Clear/reset logs and stats
 - Fully tested with Vitest and React Testing Library
-
----
 
 ## Installation
 
