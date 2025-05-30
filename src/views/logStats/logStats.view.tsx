@@ -1,6 +1,6 @@
 import { IpCount } from "@/components/ipCount/ipCount";
-import { TopIps } from "@/components/ipCount/topIps";
-import { TopUrls } from "@/components/ipCount/topUrls";
+import { TopIps } from "@/components/topIps/topIps";
+import { TopUrls } from "@/components/topUrls/topUrls";
 
 export const LogStats = () => {
   return (
