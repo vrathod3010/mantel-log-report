@@ -1,5 +1,5 @@
 import { observer } from "@legendapp/state/react";
-import { Table, TableBody, TableCell, TableRow } from "./ui/table";
+import { Table, TableBody, TableCell, TableRow } from "../ui/table";
 import { stats$ } from "@/store/stats";
 
 export const IpCount = observer(() => {

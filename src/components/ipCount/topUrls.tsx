@@ -1,33 +1,32 @@
 import { observer } from "@legendapp/state/react";
 
 import {
+  Table,
   TableHeader,
   TableRow,
   TableHead,
   TableBody,
   TableCell,
-  Table,
-} from "./ui/table";
+} from "../ui/table";
 import { stats$ } from "@/store/stats";
 
-export const TopIps = observer(() => {
-  const topIps = stats$.topIps.get({ shallow: true });
+export const TopUrls = observer(() => {
+  const topUrls = stats$.topUrls.get({ shallow: true });
 
-  if (topIps === null) return null;
-
+  if (topUrls === null) return null;
   return (
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Top IPs</TableHead>
+          <TableHead>Top URLs</TableHead>
           <TableHead className="text-right">Count</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {topIps.map((ip) => (
-          <TableRow key={ip.ip}>
-            <TableCell>{ip.ip}</TableCell>
-            <TableCell className="text-right">{ip.count}</TableCell>
+        {topUrls.map((url) => (
+          <TableRow key={url.url}>
+            <TableCell>{url.url}</TableCell>
+            <TableCell className="text-right">{url.count}</TableCell>
           </TableRow>
         ))}
       </TableBody>

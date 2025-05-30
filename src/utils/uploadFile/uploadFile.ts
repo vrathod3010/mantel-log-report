@@ -1,17 +1,7 @@
-import { logs } from "../../drizzle/schema";
+import { logs } from "@/drizzle/schema";
 import { drizzleDb } from "@/drizzle/db";
 import { setStats } from "@/store/stats";
-
-export const parseLogLine = (line: string) => {
-  const regex =
-    /^(\S+) \S+ \S+ \[([^\]]+)] "(GET|POST|PUT|DELETE|HEAD) ([^ ]+) [^"]+" (\d{3}) \d+ "[^"]*" "([^"]*)"/;
-
-  const match = line.match(regex);
-  if (!match) return null;
-
-  const [, ip, datetime, method, url, status, userAgent] = match;
-  return { ip, datetime, method, url, status: parseInt(status, 10), userAgent };
-};
+import { parseLogLine } from "../parseLogLine/parseLogLine";
 
 export const uploadFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
   if ((await drizzleDb.$count(logs)) > 0) {
