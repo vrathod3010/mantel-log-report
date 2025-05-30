@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { uploadFile, parseLogLine } from "./uploadFile";
 import { drizzleDb } from "@/drizzle/db";
 import { setStats } from "@/store/stats";
-import { logs } from "../drizzle/schema";
+import { logs } from "@/drizzle/schema";
 
 // Mock dependencies
 vi.mock("@/drizzle/db", () => ({

@@ -1,4 +1,4 @@
-import { logs } from "../drizzle/schema";
+import { logs } from "../../drizzle/schema";
 import { drizzleDb } from "@/drizzle/db";
 import { setStats } from "@/store/stats";
 
