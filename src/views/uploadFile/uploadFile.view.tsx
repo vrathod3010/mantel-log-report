@@ -1,10 +1,18 @@
-import { uploadFile } from "../../utils/uploadFile/uploadFile";
-import { Input } from "../../components/ui/input";
+import { uploadFile } from "@/utils/uploadFile/uploadFile";
+import { Input } from "@/components/ui/input";
 import { drizzleDb } from "@/drizzle/db";
 import { Button } from "@/components/ui/button";
 import { resetStats } from "@/store/stats";
 import { useRef } from "react";
 
+/**
+ * UploadFile Component
+ *
+ * This component provides functionality for uploading log files and clearing logs.
+ * It includes:
+ * - An input field for selecting log files.
+ * - A button to clear logs from the database and reset statistics.
+ */
 export const UploadFile = () => {
   const ref = useRef<HTMLInputElement>(null);
   return (

@@ -10,6 +10,15 @@ import {
 } from "../ui/table";
 import { stats$ } from "@/store/stats";
 
+/**
+ * TopIps Component
+ *
+ * A React functional component that displays the top IPs accessing the application along with their access counts.
+ *
+ * The component observes changes in the `stats$` store and updates the UI reactively.
+ * If the `topIps` data is `null`, the component renders nothing.
+ * Otherwise, it displays the top IPs and their counts in a table format.
+ */
 export const TopIps = observer(() => {
   const topIps = stats$.topIps.get({ shallow: true });
 
